@@ -22,4 +22,29 @@ void TestaArrayInt()
         Console.WriteLine($"Média de idades: {media}");
 }
 
-TestaArrayInt();
+void TesteBuscarPalavra()
+{
+    string[] arrayDePalavras = new string[5];
+
+    for (int i = 0; i < arrayDePalavras.Length; i++)
+    {
+        Console.Write($"Digite a {i + 1}ª palavra: ");
+        arrayDePalavras[i] = Console.ReadLine();
+
+    }
+
+    Console.Write("Digite a palavra a ser buscada: ");
+    var busca = Console.ReadLine();
+
+    foreach (string palavra in arrayDePalavras)
+    {
+        if (palavra.Equals(busca))
+        {
+            Console.WriteLine($"Palavra encontrada = {busca}");
+            break;
+        }
+    }
+}
+
+//TestaArrayInt();
+TesteBuscarPalavra();
