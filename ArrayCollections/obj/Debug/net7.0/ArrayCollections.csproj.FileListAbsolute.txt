@@ -1,0 +1,14 @@
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\bin\Debug\net7.0\ArrayCollections.exe
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\bin\Debug\net7.0\ArrayCollections.deps.json
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\bin\Debug\net7.0\ArrayCollections.runtimeconfig.json
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\bin\Debug\net7.0\ArrayCollections.dll
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\bin\Debug\net7.0\ArrayCollections.pdb
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.AssemblyInfoInputs.cache
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.AssemblyInfo.cs
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.csproj.CoreCompileInputs.cache
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.dll
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\refint\ArrayCollections.dll
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.pdb
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ArrayCollections.genruntimeconfig.cache
+C:\Users\kreus\source\repos\ArrayCollections\ArrayCollections\obj\Debug\net7.0\ref\ArrayCollections.dll
