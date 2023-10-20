@@ -65,6 +65,29 @@ void testaMediana(Array array)
 
 }
 
+double TestaMedia(Array amostra) {
+
+    if ((amostra == null) || (amostra.Length == 0))
+    {
+        Console.WriteLine("Amostra de dados nula ou vazia.");
+        return 0;
+    }
+    else
+    {
+        double somaTotal = 0;
+        for (int i = 0; i < amostra.Length; i++)
+        {
+            somaTotal += (double) amostra.GetValue(i)!;
+        }
+
+        double media = somaTotal / amostra.Length;
+        Console.WriteLine($"Com base na amostra, a média é igual a {media.ToString("#.##")}");
+        return media;
+
+    }
+
+}
+
 Array amostra = Array.CreateInstance(typeof(double), 5);
 amostra.SetValue(5.9, 0);
 amostra.SetValue(1.8, 1);
@@ -74,4 +97,5 @@ amostra.SetValue(6.9, 4);
 
 //TestaArrayInt();
 //TesteBuscarPalavra();
-testaMediana(amostra);
+//testaMediana(amostra);
+TestaMedia(amostra);
