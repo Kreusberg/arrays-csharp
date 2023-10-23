@@ -1,4 +1,7 @@
-﻿Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
+﻿using ArrayCollections.bytebank.Util;
+using bytebank.Modelos.Conta;
+
+Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
 void TestaArrayInt()
 {
@@ -88,6 +91,18 @@ double TestaMedia(Array amostra) {
 
 }
 
+void TestaArrayDeContasCorrentes()
+{
+    ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
+    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    
+}
+
 Array amostra = Array.CreateInstance(typeof(double), 5);
 amostra.SetValue(5.9, 0);
 amostra.SetValue(1.8, 1);
@@ -98,4 +113,5 @@ amostra.SetValue(6.9, 4);
 //TestaArrayInt();
 //TesteBuscarPalavra();
 //testaMediana(amostra);
-TestaMedia(amostra);
+//TestaMedia(amostra);
+TestaArrayDeContasCorrentes();
