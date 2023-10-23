@@ -120,14 +120,13 @@ ContaCorrente cc5 = new(874, "EE")
 void TestaArrayDeContasCorrentes()
 {
     ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
-    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
-    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
-    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
-    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
-    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
-    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(cc1);
+    listaDeContas.Adicionar(cc2);
+    listaDeContas.Adicionar(cc3);
+    listaDeContas.Adicionar(cc4);
+    listaDeContas.Adicionar(cc5);
     ContaCorrente cc = listaDeContas.MaiorSaldo();
-    Console.WriteLine($"Conta com maior valor: {cc}");
+    Console.WriteLine($"Conta com maior valor: {cc.Conta}");
 
 }
 
