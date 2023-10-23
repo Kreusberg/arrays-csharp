@@ -91,6 +91,32 @@ double TestaMedia(Array amostra) {
 
 }
 
+ContaCorrente cc1 = new(874, "AA")
+{
+    Saldo = 100
+};
+
+ContaCorrente cc2 = new(874, "BB")
+{
+    Saldo = 200
+};
+
+ContaCorrente cc3 = new(874, "CC")
+{
+    Saldo = 65.9
+};
+
+ContaCorrente cc4 = new(874, "DD")
+{
+    Saldo = 78.1
+};
+
+ContaCorrente cc5 = new(874, "EE")
+{
+    Saldo = 10
+};
+
+
 void TestaArrayDeContasCorrentes()
 {
     ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
@@ -100,8 +126,11 @@ void TestaArrayDeContasCorrentes()
     listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
     listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
     listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
-    
+    ContaCorrente cc = listaDeContas.MaiorSaldo();
+    Console.WriteLine($"Conta com maior valor: {cc}");
+
 }
+
 
 Array amostra = Array.CreateInstance(typeof(double), 5);
 amostra.SetValue(5.9, 0);
@@ -109,6 +138,7 @@ amostra.SetValue(1.8, 1);
 amostra.SetValue(7.1, 2);
 amostra.SetValue(10, 3);
 amostra.SetValue(6.9, 4);
+
 
 //TestaArrayInt();
 //TesteBuscarPalavra();

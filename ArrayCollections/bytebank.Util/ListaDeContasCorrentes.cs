@@ -38,5 +38,27 @@ namespace ArrayCollections.bytebank.Util
                 _itens = novoArray;
             }
         }
+
+        public ContaCorrente MaiorSaldo()
+        {
+
+            ContaCorrente conta = null;
+            double maiorValor = 0;
+            for (int i = 0; i < _itens.Length; i++)
+            {
+                if (_itens[i] != null)
+                {
+                    if (maiorValor < _itens[i].Saldo)
+                    {
+                        maiorValor = _itens[i].Saldo;
+                        conta = _itens[i];
+                    }
+                }
+
+            }
+
+            return conta;
+        }
+
     }
 }
