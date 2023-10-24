@@ -20,6 +20,26 @@ namespace ArrayCollections.bytebank.Util
             _proximaPosicao++;
         }
 
+        public void Remover(ContaCorrente conta)
+        {
+            int indiceItem = -1;
+            for (int i = 0; i < _proximaPosicao; i++)
+            {
+                ContaCorrente contaAtual = _itens[i];
+                if (contaAtual == conta)
+                {
+                    indiceItem = i;
+                    break;
+                }
+            }
+            for (int i = indiceItem; i < _proximaPosicao - 1; i++)
+            {
+                _itens[i] = _itens[i + 1];
+            }
+            _proximaPosicao--;
+            _itens[_proximaPosicao] = null;
+        }
+
         private void VerificarCapacidade(int tamanhoNecessario)
         {
             if (_itens.Length >= tamanhoNecessario)
@@ -41,6 +61,16 @@ namespace ArrayCollections.bytebank.Util
 
         public ContaCorrente MaiorSaldo() => _itens.MaxBy(i => i.Saldo);
 
-
+        public void ExibeLista()
+        {
+            for (int i = 0; i < _itens.Length; i++)
+            {
+                if (_itens[i] != null)
+                {
+                    var conta = _itens[i];
+                    Console.WriteLine($"Índice [{i}] = Conta: {conta.Conta} - N° da Agência: {conta.Numero_agencia}");
+                }
+            }
+        }
     }
 }

@@ -91,42 +91,21 @@ double TestaMedia(Array amostra) {
 
 }
 
-ContaCorrente cc1 = new(874, "AA")
-{
-    Saldo = 100
-};
-
-ContaCorrente cc2 = new(874, "BB")
-{
-    Saldo = 200
-};
-
-ContaCorrente cc3 = new(874, "CC")
-{
-    Saldo = 65.9
-};
-
-ContaCorrente cc4 = new(874, "DD")
-{
-    Saldo = 78.1
-};
-
-ContaCorrente cc5 = new(874, "EE")
-{
-    Saldo = 10
-};
-
-
 void TestaArrayDeContasCorrentes()
 {
     ListaDeContasCorrentes listaDeContas = new ListaDeContasCorrentes();
-    listaDeContas.Adicionar(cc1);
-    listaDeContas.Adicionar(cc2);
-    listaDeContas.Adicionar(cc3);
-    listaDeContas.Adicionar(cc4);
-    listaDeContas.Adicionar(cc5);
-    ContaCorrente cc = listaDeContas.MaiorSaldo();
-    Console.WriteLine($"Conta com maior valor: {cc.Conta}");
+    listaDeContas.Adicionar(new ContaCorrente(874, "5679787-A"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "4456668-B"));
+    listaDeContas.Adicionar(new ContaCorrente(874, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(799, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(134, "7781438-C"));
+    listaDeContas.Adicionar(new ContaCorrente(758, "7781438-C"));
+    var contaDoAndre = new ContaCorrente(963, "1234567-X");
+    listaDeContas.Adicionar(contaDoAndre);
+    listaDeContas.ExibeLista();
+    Console.WriteLine("==============");
+    listaDeContas.Remover(contaDoAndre);
+    listaDeContas.ExibeLista();
 
 }
 
