@@ -1,6 +1,7 @@
 ﻿using ArrayCollections.bytebank.Util;
 using bytebank.Modelos.Conta;
 using System.Collections;
+using System.Collections.Generic;
 
 Console.WriteLine("Boas Vindas ao ByteBank, Atendimento.");
 
@@ -128,7 +129,11 @@ amostra.SetValue(6.9, 4);
 //TestaArrayDeContasCorrentes();
 #endregion
 
-ArrayList _listaDeContas = new ArrayList();
+List<ContaCorrente> _listaDeContas = new List<ContaCorrente>() {
+    new ContaCorrente(95, "123456-X") {Saldo=100},
+    new ContaCorrente(95, "951258-X") {Saldo=200},
+    new ContaCorrente(94, "987321-W") {Saldo=60}
+};
 
 void AtendimentoCliente()
 {
@@ -192,6 +197,7 @@ void CadastrarConta()
     conta.Titular.Profissao = Console.ReadLine();
 
     _listaDeContas.Add(conta);
+
     Console.WriteLine("... Conta cadastrada com sucesso! ...");
     Console.ReadKey();
 }
@@ -224,4 +230,18 @@ void ListarConta()
     }
 }
 
-AtendimentoCliente();
+//AtendimentoCliente();
+
+//Generica<int> teste1 = new Generica<int>();
+//teste1.MostrarMensagem(10);
+
+//Generica<string> teste2 = new Generica<string>();
+//teste2.MostrarMensagem("Olá mundo!");
+
+//public class Generica<T>
+//{
+//    public void MostrarMensagem(T t)
+//    {
+//        Console.WriteLine($"Exibindo {t}");
+//    }
+//}
