@@ -404,7 +404,10 @@ ContaCorrente ConsultaPorNumeroConta(string? numeroConta)
     //    }
     //}
     //return conta;
-    return _listaDeContas.Where(conta => conta.Conta.Equals(numeroConta)).FirstOrDefault();
+    return (from conta in _listaDeContas
+                     where conta.Conta.Equals(numeroConta)
+                     select conta).FirstOrDefault();
+
 }
 
 List<ContaCorrente> ConsultaPorAgencia(int numeroAgencia)
