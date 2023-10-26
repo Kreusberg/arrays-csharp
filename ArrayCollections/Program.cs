@@ -130,9 +130,9 @@ amostra.SetValue(6.9, 4);
 #endregion
 
 List<ContaCorrente> _listaDeContas = new List<ContaCorrente>() {
-    new ContaCorrente(95, "123456-X") {Saldo=100},
-    new ContaCorrente(95, "951258-X") {Saldo=200},
-    new ContaCorrente(94, "987321-W") {Saldo=60}
+    new ContaCorrente(95, "123456-X") {Saldo=100, Titular= new Cliente{Cpf="11111", Nome="Henrique" }},
+    new ContaCorrente(95, "951258-X") {Saldo=200, Titular= new Cliente{Cpf="22222", Nome="Pedro" }},
+    new ContaCorrente(94, "987321-W") {Saldo=60, Titular = new Cliente { Cpf = "33333", Nome = "Marisa" }}
 };
 
 #region Exemplos de Uso Do List
@@ -214,6 +214,12 @@ void AtendimentoCliente()
                 case '2':
                     ListarConta();
                     break;
+                case '3':
+                    RemoverConta();
+                    break;
+                case '4':
+                    OrdenarConta();
+                    break;
                 default:
                     Console.WriteLine("Opcao não implementada.");
                     break;
@@ -286,6 +292,42 @@ void ListarConta()
         Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
         Console.ReadKey();
     }
+}
+
+void RemoverConta()
+{
+    Console.Clear();
+    Console.WriteLine("===============================");
+    Console.WriteLine("===      REMOVER CONTAS     ===");
+    Console.WriteLine("===============================");
+    Console.WriteLine("\n");
+    Console.Write("Informe o número da Conta: ");
+    string numeroConta = Console.ReadLine();
+    ContaCorrente conta = null;
+    foreach (var item in _listaDeContas)
+    {
+        if (item.Conta.Equals(numeroConta))
+        {
+            conta = item;
+        }
+    }
+    if (conta != null)
+    {
+        _listaDeContas.Remove(conta);
+        Console.WriteLine("... Conta removida da lista! ...");
+    }
+    else
+    {
+        Console.WriteLine(" ... Conta para remoção não encontrada ...");
+    }
+    Console.ReadKey();
+}
+
+void OrdenarConta()
+{
+    _listaDeContas.Sort();
+    Console.WriteLine("... Lista de contas ordenada ...");
+    Console.ReadKey();
 }
 
 AtendimentoCliente();
